@@ -22,9 +22,9 @@ Replace `./filename` with the path to the sketch file.
 
 ## Sketch Files
 
-### sketch.js
+### characters.js
 
-The `sketch.js` file generates an abstract artwork using a grid of randomly distributed and rotated "█" glyphs. Each glyph varies in size, color, and rotation, influenced by Perlin noise. The composition features clusters of glyphs on a white background, creating an organic, textured appearance. The color palette is selected randomly from `nice-color-palettes`.
+The `characters.js` file generates an abstract artwork using a grid of randomly distributed and rotated `character` glyphs. Each glyph varies in size, color, and rotation, influenced by Perlin noise. The composition features clusters of glyphs on a white background, creating an organic, textured appearance. The color palette is selected randomly from `nice-color-palettes`.
 
 ### webgl.js
 

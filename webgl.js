@@ -1,4 +1,3 @@
-// Ensure ThreeJS is in global scope for the 'examples/'
 global.THREE = require("three");
 
 // Include any additional ThreeJS examples below
@@ -13,13 +12,13 @@ const settings = {
   animate: true,
   // Get a WebGL canvas rather than 2D
   context: "webgl",
-  attributes: { antialias: true }
+  attributes: { antialias: true },
 };
 
 const sketch = ({ context }) => {
   // Create a renderer
   const renderer = new THREE.WebGLRenderer({
-    canvas: context.canvas
+    canvas: context.canvas,
   });
 
   // WebGL background color
@@ -50,18 +49,16 @@ const sketch = ({ context }) => {
       random.range(-1, 1),
       random.range(-1, 1),
       random.range(-1, 1)
-    )
+    );
     mesh.scale.multiplyScalar(0.5);
     scene.add(mesh);
   }
 
+  scene.add(new THREE.AmbientLight("hsl(0, 0%, 40)", 0.5));
 
-  scene.add(new THREE.AmbientLight('hsl(0, 0%, 40)', 0.5));
-
-  const light = new THREE.DirectionalLight('white', 1);
+  const light = new THREE.DirectionalLight("white", 1);
   light.position.set(0, 0, 4);
   scene.add(light);
-
 
   // draw each frame
   return {
@@ -99,7 +96,7 @@ const sketch = ({ context }) => {
     // Dispose of events & renderer for cleaner hot-reloading
     unload() {
       renderer.dispose();
-    }
+    },
   };
 };
 
